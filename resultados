@@ -1,6 +1,6 @@
 <?php
 // definições de host, database, usuário e senha
-$host = "serverird.ddns.net";
+$host = "serverird.ddns.net:3306";
 $db   = "sixserver";
 $user = "root";
 $pass = "al200104";
