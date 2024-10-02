@@ -2,7 +2,7 @@
 
 // Lista inicial de equipes (pode ser personalizada)
 const initialTeams = [
-    { id: 1, name: "Flamengo", logo: "https://upload.wikimedia.org/wikipedia/en/1/17/CR Flamengo_logo.svg" },
+    { id: 1, name: "Flamengo Arc-Verde", logo: "https://upload.wikimedia.org/wikipedia/commons/f/f3/Logo-fla-de-arcoverde_2022-logo-frame.png" },
     { id: 2, name: "Palmeiras", logo: "https://upload.wikimedia.org/wikipedia/en/4/4f/Palmeiras_logo.svg" },
     { id: 3, name: "Corinthians", logo: "https://upload.wikimedia.org/wikipedia/commons/6/60/Logo_Corinthians.svg" },
     { id: 4, name: "São Paulo", logo: "https://upload.wikimedia.org/wikipedia/commons/0/0c/S%C3%A3o_Paulo_FC_logo.svg" },
