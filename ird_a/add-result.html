@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Resultado - Brasileirão</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Adicionar Resultado - Brasileirão</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Classificação</a></li>
+                <li><a href="add-result.html" class="active">Adicionar Resultado</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="add-result-section">
+            <h2>Adicionar Resultado de Partida</h2>
+            <form id="result-form">
+                <div class="form-group">
+                    <label for="home-team">Time da Casa:</label>
+                    <select id="home-team" required>
+                        <option value="">Selecione</option>
+                        <!-- Opções de times serão inseridas via JavaScript -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="away-team">Time Visitante:</label>
+                    <select id="away-team" required>
+                        <option value="">Selecione</option>
+                        <!-- Opções de times serão inseridas via JavaScript -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="home-goals">Gols da Casa:</label>
+                    <input type="number" id="home-goals" min="0" required>
+                </div>
+                <div class="form-group">
+                    <label for="away-goals">Gols do Visitante:</label>
+                    <input type="number" id="away-goals" min="0" required>
+                </div>
+                <button type="submit">Adicionar Resultado</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Brasileirão Classificação</p>
+    </footer>
+
+    <script src="add-result.js"></script>
+</body>
+</html>
