@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blocos de Notas Altiere</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 20px;
+        }
+        .note {
+            width: 250px;
+            height: 200px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+        }
+        textarea {
+            flex: 1;
+            width: 100%;
+            resize: none;
+        }
+        button {
+            margin-top: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const numNotas = 21;
+            
+            for (let i = 0; i < numNotas; i++) {
+                const note = document.createElement("div");
+                note.classList.add("note");
+                
+                const textarea = document.createElement("textarea");
+                textarea.value = localStorage.getItem("nota_" + i) || "";
+                textarea.addEventListener("input", function() {
+                    localStorage.setItem("nota_" + i, textarea.value);
+                });
+                
+                const button = document.createElement("button");
+                button.innerText = "Copiar";
+                button.addEventListener("click", function() {
+                    navigator.clipboard.writeText(textarea.value);
+                    alert("Texto copiado!");
+                });
+                
+                note.appendChild(textarea);
+                note.appendChild(button);
+                document.body.appendChild(note);
+            }
+        });
+    </script>
+</body>
+</html>
